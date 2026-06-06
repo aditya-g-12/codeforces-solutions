@@ -1,24 +1,15 @@
-#include <iostream>
-#include <vector>
+#include<iostream>
 #include<string>
 using namespace std;
-int main()
-{
-    int i;
-    cin >> i;
-    string input[i];
-    for (int k=0;i>k;k++){
-        cin >> input[k];
-        if(input[k].size()>10){
-            cout << input[k][0];
-            cout << ((input[k].size())-2);
-            cout << input[k][((input[k].size())-1)]<< endl;
-        }
-        else{
-            cout << input[k]<< endl;
+int main (){
+    int year;
+    cin>>year;
+    while(true){
+        year++;
+        string s = to_string(year);
+        if(s[0]!=s[1] && s[0]!=s[2] &&s[0]!=s[3]&&s[1]!=s[2] && s[1]!=s[3]&&s[2]!=s[3]){
+            cout<<year;
+            break;
         }
     }
- 
-
-    return 0;
 }
